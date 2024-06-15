@@ -4,7 +4,7 @@ Demo Log Forwarded Request Header(s)
 
 ### Prerequisites
 
-Java 8
+Java 17
 
 ## Running the tests
 
@@ -20,4 +20,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-TrustArc, Inc.
+Wildcard Software, Inc.

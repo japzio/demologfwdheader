@@ -1,4 +1,4 @@
-package com.japzio.demologfwdheader.demoendpoint.model;
+package com.japzio.logfwdheader.api.v1.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

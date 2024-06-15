@@ -1,4 +1,4 @@
-package com.japzio.demologfwdheader.config;
+package com.japzio.logfwdheader.config;
 
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;

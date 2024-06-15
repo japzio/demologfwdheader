@@ -1,11 +1,11 @@
-package com.japzio.demologfwdheader.demoendpoint.controller;
+package com.japzio.logfwdheader.api.v1.controller;
 
-import com.japzio.demologfwdheader.demoendpoint.model.Greeting;
+import com.japzio.logfwdheader.api.v1.model.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DemoEndpointController {
+public class EndpointController {
 
   @GetMapping(value = "/greeting", produces = "application/json")
   public Greeting greeting() {
