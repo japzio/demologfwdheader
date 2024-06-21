@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 @Component
-public class HeaderFilter implements Filter {
+public class FilterConfig implements Filter {
 
   @Value("${logging.custom-header:X-Request-ID}")
   private String extraHeader;
@@ -20,7 +20,7 @@ public class HeaderFilter implements Filter {
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
     try {
-      MDC.put(extraHeader, ((HttpServletRequest)servletRequest).getHeader(extraHeader));
+      MDC.put(extraHeader, ((HttpServletRequest)servletRequest).getHeader(extraHeader.toLowerCase()));
       ((HttpServletResponse) servletResponse).setHeader(extraHeader, ((HttpServletRequest)servletRequest).getHeader(extraHeader));
       filterChain.doFilter(servletRequest, servletResponse);
     } finally {
@@ -29,7 +29,7 @@ public class HeaderFilter implements Filter {
 
   }
   @Override
-  public void init(FilterConfig filterConfig) throws ServletException {}
+  public void init(javax.servlet.FilterConfig filterConfig) throws ServletException {}
   @Override
   public void destroy() {}
 

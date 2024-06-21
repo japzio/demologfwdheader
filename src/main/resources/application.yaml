@@ -1,12 +1,10 @@
 # default springboot configuration file
 
 logging:
-  level.root: info
-  path: ./logs
-  file: file:${logging.path}/demo.log
+  level:
+    root: INFO
   pattern:
-    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %X{X-Request-ID} %highlight(%-5level) %logger.%M - %msg%n"
-    file: ${logging.pattern.console}
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %X{X-Request-ID:-null} %highlight(%-5level) %logger.%M - %msg%n"
   custom-header: X-Request-ID
 
 server:
